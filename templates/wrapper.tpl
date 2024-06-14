@@ -14,6 +14,8 @@
     {{ template "grid" . }}
 {{ else if eq .InternalTemplate "course" }}
     {{ template "course" . }}
+{{ else if eq .InternalTemplate "story" }}
+    {{ template "story" . }}
 {{ else }}
     <h2>Página no encontrada</h2>
 {{ end }}

@@ -237,6 +237,18 @@
           </div>
         </div>
       </div>
+      <div class="course-banner-cover lg-order-2 lg-cols-4 s-ratio-16-9 s-overflow-hidden false">
+        <div class="img-container lg-radius-1 s-ratio-16-9 background black-400">
+          <video controls width="250">
+            <source src="/videos/pericon-eduardo-sacheri.mp4" type="video/mp4" />
+            Download the
+            <a href="/media/cc0-videos/flower.webm">WEBM</a>
+            or
+            <a href="/public/videos/pericon-eduardo-sacheri.mp4">MP4</a>
+            video.
+          </video>
+        </div>
+      </div>
     </div>
   </div>
 

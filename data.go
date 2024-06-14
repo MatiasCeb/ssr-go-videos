@@ -24,9 +24,27 @@ type course struct {
 	Modules      []module
 }
 
+type story struct {
+	Slug         string
+	Img          string
+	Title        string
+	Name         string
+	Description  string
+	Average      float64
+	Professor    string
+	ProfessorImg string
+	Price        float64
+	Modules      []module
+}
+
 type gridPage struct {
 	InternalTemplate string
-	Courses          []course
+	Course           []course
+}
+
+type gridStoryPage struct {
+	InternalTemplate string
+	Story            []story
 }
 
 type coursePage struct {
@@ -34,25 +52,30 @@ type coursePage struct {
 	Course           course
 }
 
+type storyPage struct {
+	InternalTemplate string
+	Story            story
+}
+
 func loadGrid() []course {
 	return []course{
 		{
 			Slug:         "go",
-			Img:          "https://edteam-media.s3.amazonaws.com/courses/big/91e149d0-961a-4594-a8ff-0a625be9cdd2.png",
-			Title:        "Go desde cero",
-			Name:         "Go desde cero",
-			Description:  "Adquiere los conocimientos básicos para iniciar a programar con Go.",
+			Img:          "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Title:        "Eduardo Sacheri",
+			Name:         "Eduardo Sacheri",
+			Description:  "Los mejores relatos en la voz del reconocido escritor argentino.",
 			Average:      4.7,
 			Professor:    "Alejo Rodriguez",
 			ProfessorImg: "https://edteam-media.s3.amazonaws.com/users/thumbnail/952327c3-2bd9-41d1-819e-9b5d7eb84c13.jpg",
 			Price:        30,
 			Modules: []module{
 				{
-					Title:       "Qué es Go",
-					Description: "Aprenderemos qué es el lenguaje Go",
+					Title:       "Eduardo Sacheri",
+					Description: "Eduardo Sacheri",
 					Classes: []class{
 						{
-							Title:    "Historia",
+							Title:    "Pericón",
 							Duration: "05:33",
 						},
 						{
@@ -113,6 +136,86 @@ func loadGrid() []course {
 	}
 }
 
+func loadStory() []story {
+	return []story{
+		{
+			Slug: "go",
+			Img:  "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			// video:        "https://www.youtube.com/watch?v=ErVx9QyoBQI&ab_channel=BugBytes",
+			Title:        "Eduardo Sacheri",
+			Name:         "Eduardo Sacheri",
+			Description:  "Los mejores relatos en la voz del reconocido escritor argentino.",
+			Average:      4.7,
+			Professor:    "Alejo Rodriguez",
+			ProfessorImg: "https://edteam-media.s3.amazonaws.com/users/thumbnail/952327c3-2bd9-41d1-819e-9b5d7eb84c13.jpg",
+			Price:        30,
+			Modules: []module{
+				{
+					Title:       "Eduardo Sacheri",
+					Description: "Eduardo Sacheri",
+					Classes: []class{
+						{
+							Title:    "Pericón",
+							Duration: "05:33",
+						},
+						{
+							Title:    "Creadores",
+							Duration: "03:02",
+						},
+					},
+				},
+				{
+					Title:       "Sintaxis",
+					Description: "Bases del lenguaje",
+					Classes: []class{
+						{
+							Title:    "Declaración de Variables",
+							Duration: "05:33",
+						},
+						{
+							Title:    "Constantes",
+							Duration: "03:02",
+						},
+					},
+				},
+			},
+		},
+		{
+			Slug:         "go-poo",
+			Img:          "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Title:        "POO con Go",
+			Name:         "POO con Go",
+			Description:  "Aprende a usar la programación orientada a objetos en Go",
+			Average:      4.8,
+			Professor:    "Alejo Rodriguez",
+			ProfessorImg: "https://edteam-media.s3.amazonaws.com/users/thumbnail/952327c3-2bd9-41d1-819e-9b5d7eb84c13.jpg",
+			Price:        30,
+		},
+		{
+			Slug:         "go-database",
+			Img:          "https://edteam-media.s3.amazonaws.com/courses/big/4d60ef81-2e58-457f-97c7-ee8847663985.jpg",
+			Title:        "Bases de datos con Go",
+			Name:         "Bases de datos con Go",
+			Description:  "Aprende a integrar y usar las bases de datos en Go",
+			Average:      4.8,
+			Professor:    "Alejo Rodriguez",
+			ProfessorImg: "https://edteam-media.s3.amazonaws.com/users/thumbnail/952327c3-2bd9-41d1-819e-9b5d7eb84c13.jpg",
+			Price:        30,
+		},
+		{
+			Slug:         "go-testing",
+			Img:          "https://edteam-media.s3.amazonaws.com/courses/big/a9913502-8af2-400b-8095-7b78f52200dc.png",
+			Title:        "Testing con Go",
+			Name:         "Testing con Go",
+			Description:  "Aprende a crear tests y medir la eficiencia de tus proyectos con Go",
+			Average:      4.7,
+			Professor:    "Alexys Lozada",
+			ProfessorImg: "https://edteam-media.s3.amazonaws.com/users/thumbnail/66f015b2-0dfb-4ba9-bd0d-f7a7e1855275.jpeg",
+			Price:        24,
+		},
+	}
+}
+
 func getCourse(slug string) course {
 	data := loadGrid()
 	for _, v := range data {
@@ -122,4 +225,15 @@ func getCourse(slug string) course {
 	}
 
 	return course{}
+}
+
+func getStory(slug string) story {
+	data := loadStory()
+	for _, s := range data {
+		if s.Slug == slug {
+			return s
+		}
+	}
+
+	return story{}
 }

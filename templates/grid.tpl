@@ -3,26 +3,26 @@
   {{ template "navigation" }}
   <div class="ed-grid m-grid-2 lg-grid-4 row-gap">
 
-  {{ range $i, $course := .Courses }}
+  {{ range $i, $story := .Story }}
     <article
       class="course-card s-radius-1 s-shadow-bottom background s-shadow-card-micro s-transition white-color nowrap s-column s-mb-0">
       <div class="s-column flex-grow ">
         <div class="img-container s-ratio-16-9 s-radius-tl-1 s-radius-tr-1">
-          <a href="/cursos/{{ $course.Slug }}">
-            <img class="img-course-card s-transition" alt="{{ $course.Title }}"
-              src="{{ $course.Img }}">
+          <a href="/story/{{ $story.Slug }}">
+            <img class="img-course-card s-transition" alt="{{ $story.Title }}"
+              src="{{ $story.Img }}">
           </a>
         </div>
-        <div title="{{ $course.Title }}" class="course-progress s-mt-05"></div>
+        <div title="{{ $story.Title }}" class="course-progress s-mt-05"></div>
         <div class="s-pxy-2 s-column flex-grow">
-          <a href="/cursos/{{ $course.Slug }}">
+          <a href="/story/{{ $story.Slug }}">
             <h3 class="s-mb-1 t4">
-              <span class="s-color-grey-700">{{ $course.Name }}</span>
+              <span class="s-color-grey-700">{{ $story.Name }}</span>
             </h3>
           </a>
           <p class="description small s-row-text-3 s-mb-2"
-            title="{{ $course.Description }}">
-                {{ $course.Description }}
+            title="{{ $story.Description }}">
+                {{ $story.Description }}
           </p>
           <div class="flex nowrap s-to-bottom">
             <a
@@ -43,7 +43,7 @@
                     d="M48.856,22.73c0.983-0.958,1.33-2.364,0.906-3.671c-0.425-1.307-1.532-2.24-2.892-2.438l-12.092-1.757c-0.515-0.075-0.96-0.398-1.19-0.865L28.182,3.043c-0.607-1.231-1.839-1.996-3.212-1.996c-1.372,0-2.604,0.765-3.211,1.996L16.352,14c-0.23,0.467-0.676,0.79-1.191,0.865L3.069,16.622c-1.359,0.197-2.467,1.131-2.892,2.438c-0.424,1.307-0.077,2.713,0.906,3.671l8.749,8.528c0.373,0.364,0.544,0.888,0.456,1.4L8.224,44.701c-0.183,1.06,0.095,2.091,0.781,2.904c1.066,1.267,2.927,1.653,4.415,0.871l10.814-5.686c0.452-0.237,1.021-0.235,1.472,0l10.815,5.686c0.526,0.277,1.087,0.417,1.666,0.417c1.057,0,2.059-0.47,2.748-1.288c0.687-0.813,0.964-1.846,0.781-2.904l-2.065-12.042c-0.088-0.513,0.083-1.036,0.456-1.4L48.856,22.73z">
                   </path>
                 </svg>
-                <p class="s-mb-0 s-color-text-light">{{ $course.Average }}</p>
+                <p class="s-mb-0 s-color-text-light">{{ $story.Average }}</p>
               </div>
             </div>
           </div>
@@ -52,16 +52,16 @@
       <footer
         class="background grey-color-lighter s-px-2 s-py-1 s-radius-bl-1 s-radius-br-1 flex nowrap s-z-normal s-to-bottom footer-card s-relative">
         <div class="s-main-center ">
-          <div title="{{ $course.Professor }}" class="card__teacher s-cross-center nowrap ">
+          <div title="{{ $story.Professor }}" class="card__teacher s-cross-center nowrap ">
             <div id="" class="user-avatar flex-none s-small s-mr-1 ">
               <div class="img-container circle">
                 <img
-                  src="{{ $course.ProfessorImg }}"
+                  src="{{ $story.ProfessorImg }}"
                   alt="Avatar" loading="lazy">
               </div>
             </div>
               <span class="card__teacher-name smaller s-row-text-1 s-z-normal s-mr-1">
-                {{ $course.Professor }}
+                {{ $story.Professor }}
               </span>
           </div>
         </div>
@@ -92,7 +92,7 @@
                     </g>
                   </svg>
                   <span class="color s-font-semibold blue-500 s-whitespace-nowrap">
-                    {{ usd $course.Price}}
+                    {{ usd $story.Price}}
                   </span>
                 </button>
               </div>

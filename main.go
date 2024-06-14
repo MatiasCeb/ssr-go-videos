@@ -21,9 +21,11 @@ func main() {
 
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("public/css"))))
 	http.Handle("/imgs/", http.StripPrefix("/imgs/", http.FileServer(http.Dir("public/imgs"))))
+	http.Handle("/videos/", http.StripPrefix("/videos/", http.FileServer(http.Dir("public/videos"))))
 
 	http.HandleFunc("/", middleware(t, "index"))
 	http.HandleFunc("/cursos/", middleware(t, "courses"))
+	http.HandleFunc("/story/", middleware(t, "stories"))
 
 	err = http.ListenAndServe(":8080", nil)
 	if err != nil {
@@ -41,6 +43,10 @@ func middleware(t *template.Template, funcName string) func(w http.ResponseWrite
 		return func(w http.ResponseWriter, r *http.Request) {
 			courses(t, w, r)
 		}
+	case "stories":
+		return func(w http.ResponseWriter, r *http.Request) {
+			stories(t, w, r)
+		}
 	}
 
 	return func(w http.ResponseWriter, r *http.Request) {
@@ -49,7 +55,7 @@ func middleware(t *template.Template, funcName string) func(w http.ResponseWrite
 }
 
 func index(t *template.Template, w http.ResponseWriter, r *http.Request) {
-	gp := gridPage{"grid", loadGrid()}
+	gp := gridStoryPage{"grid", loadStory()}
 	err := t.ExecuteTemplate(w, "wrapper", &gp)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -60,6 +66,15 @@ func courses(t *template.Template, w http.ResponseWriter, r *http.Request) {
 	slug := r.URL.Path[len("/cursos/"):]
 	cp := coursePage{"course", getCourse(slug)}
 	err := t.ExecuteTemplate(w, "wrapper", &cp)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
+func stories(t *template.Template, w http.ResponseWriter, r *http.Request) {
+	slug := r.URL.Path[len("/story/"):]
+	sp := storyPage{"story", getStory(slug)}
+	err := t.ExecuteTemplate(w, "wrapper", &sp)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
