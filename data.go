@@ -4,11 +4,14 @@ type class struct {
 	Title    string
 	Duration string
 	Slug     string
+	Video    string
 }
 
 type module struct {
 	Title       string
 	Description string
+	Slug        string
+	Video       string
 	Classes     []class
 }
 
@@ -57,6 +60,11 @@ type coursePage struct {
 type storyPage struct {
 	InternalTemplate string
 	Story            story
+}
+
+type classPage struct {
+	InternalTemplate string
+	Class            class
 }
 
 func loadGrid() []course {
@@ -141,7 +149,7 @@ func loadGrid() []course {
 func loadStory() []story {
 	return []story{
 		{
-			Slug:         "eduardo-sacheri",
+			Slug:         "pericon-eduardo-sacheri",
 			Img:          "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
 			Video:        "/videos/pericon-eduardo-sacheri.mp4",
 			Title:        "Eduardo Sacheri",
@@ -155,32 +163,40 @@ func loadStory() []story {
 				{
 					Title:       "Jorge Luis Borges",
 					Description: "Textos de Jorge Luis Borges",
+					Slug:        "pericon-eduardo-sacheri",
+					Video:       "/videos/pericon-eduardo-sacheri.mp4",
 					Classes: []class{
 						{
 							Title:    "Pericón",
 							Duration: "05:33",
 							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
 						},
 						{
 							Title:    "Pericón 2",
 							Duration: "03:02",
 							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
 						},
 					},
 				},
 				{
 					Title:       "Ray Bradbury",
 					Description: "Textos de Ray Bradbury",
+					Slug:        "la-sirena-ray-bradbury",
+					Video:       "/videos/la-sirena-ray-bradbury.mp4",
 					Classes: []class{
 						{
 							Title:    "La sirena",
 							Duration: "05:33",
-							Slug:     "pericon-eduardo-sacheri",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
 						},
 						{
 							Title:    "La sirena 2",
 							Duration: "03:02",
-							Slug:     "pericon-eduardo-sacheri",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
 						},
 					},
 				},
@@ -222,6 +238,35 @@ func loadStory() []story {
 	}
 }
 
+func loadClasses() []class {
+	return []class{
+		{
+			Title:    "Pericón",
+			Duration: "05:33",
+			Slug:     "pericon-eduardo-sacheri",
+			Video:    "/videos/pericon-eduardo-sacheri.mp4",
+		},
+		{
+			Title:    "Pericón 2",
+			Duration: "03:02",
+			Slug:     "pericon-eduardo-sacheri",
+			Video:    "/videos/pericon-eduardo-sacheri.mp4",
+		},
+		{
+			Title:    "La sirena",
+			Duration: "05:33",
+			Slug:     "la-sirena-ray-bradbury",
+			Video:    "/videos/la-sirena-ray-bradbury.mp4",
+		},
+		{
+			Title:    "La sirena 2",
+			Duration: "03:02",
+			Slug:     "la-sirena-ray-bradbury",
+			Video:    "/videos/la-sirena-ray-bradbury.mp4",
+		},
+	}
+}
+
 func getCourse(slug string) course {
 	data := loadGrid()
 	for _, v := range data {
@@ -242,4 +287,15 @@ func getStory(slug string) story {
 	}
 
 	return story{}
+}
+
+func getStoryVideo(slug string) class {
+	data := loadClasses()
+	for _, c := range data {
+		if c.Slug == slug {
+			return c
+		}
+	}
+
+	return class{}
 }

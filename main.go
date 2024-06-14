@@ -87,7 +87,7 @@ func courses(t *template.Template, w http.ResponseWriter, r *http.Request) {
 
 func stories(t *template.Template, w http.ResponseWriter, r *http.Request) {
 	slug := r.URL.Path[len("/story/"):]
-	sp := storyPage{"story", getStory(slug)}
+	sp := classPage{"story", getStoryVideo(slug)}
 	err := t.ExecuteTemplate(w, "wrapper", &sp)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
