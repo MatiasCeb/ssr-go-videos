@@ -12,6 +12,8 @@
 <body>
 {{ if eq .InternalTemplate "grid" }}
     {{ template "grid" . }}
+{{ else if eq .InternalTemplate "narrator" }}
+{{ template "narrator" . }}
 {{ else if eq .InternalTemplate "course" }}
     {{ template "course" . }}
 {{ else if eq .InternalTemplate "story" }}

@@ -3,6 +3,7 @@ package main
 type class struct {
 	Title    string
 	Duration string
+	Slug     string
 }
 
 type module struct {
@@ -27,6 +28,7 @@ type course struct {
 type story struct {
 	Slug         string
 	Img          string
+	Video        string
 	Title        string
 	Name         string
 	Description  string
@@ -139,9 +141,9 @@ func loadGrid() []course {
 func loadStory() []story {
 	return []story{
 		{
-			Slug: "go",
-			Img:  "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
-			// video:        "https://www.youtube.com/watch?v=ErVx9QyoBQI&ab_channel=BugBytes",
+			Slug:         "eduardo-sacheri",
+			Img:          "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Video:        "/videos/pericon-eduardo-sacheri.mp4",
 			Title:        "Eduardo Sacheri",
 			Name:         "Eduardo Sacheri",
 			Description:  "Los mejores relatos en la voz del reconocido escritor argentino.",
@@ -151,30 +153,34 @@ func loadStory() []story {
 			Price:        30,
 			Modules: []module{
 				{
-					Title:       "Eduardo Sacheri",
-					Description: "Eduardo Sacheri",
+					Title:       "Jorge Luis Borges",
+					Description: "Textos de Jorge Luis Borges",
 					Classes: []class{
 						{
 							Title:    "Pericón",
 							Duration: "05:33",
+							Slug:     "pericon-eduardo-sacheri",
 						},
 						{
-							Title:    "Creadores",
+							Title:    "Pericón 2",
 							Duration: "03:02",
+							Slug:     "pericon-eduardo-sacheri",
 						},
 					},
 				},
 				{
-					Title:       "Sintaxis",
-					Description: "Bases del lenguaje",
+					Title:       "Ray Bradbury",
+					Description: "Textos de Ray Bradbury",
 					Classes: []class{
 						{
-							Title:    "Declaración de Variables",
+							Title:    "La sirena",
 							Duration: "05:33",
+							Slug:     "pericon-eduardo-sacheri",
 						},
 						{
-							Title:    "Constantes",
+							Title:    "La sirena 2",
 							Duration: "03:02",
+							Slug:     "pericon-eduardo-sacheri",
 						},
 					},
 				},

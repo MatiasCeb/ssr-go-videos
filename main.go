@@ -24,6 +24,7 @@ func main() {
 	http.Handle("/videos/", http.StripPrefix("/videos/", http.FileServer(http.Dir("public/videos"))))
 
 	http.HandleFunc("/", middleware(t, "index"))
+	http.HandleFunc("/narrator/", middleware(t, "narrator"))
 	http.HandleFunc("/cursos/", middleware(t, "courses"))
 	http.HandleFunc("/story/", middleware(t, "stories"))
 
@@ -38,6 +39,10 @@ func middleware(t *template.Template, funcName string) func(w http.ResponseWrite
 	case "index":
 		return func(w http.ResponseWriter, r *http.Request) {
 			index(t, w, r)
+		}
+	case "narrator":
+		return func(w http.ResponseWriter, r *http.Request) {
+			narrator(t, w, r)
 		}
 	case "courses":
 		return func(w http.ResponseWriter, r *http.Request) {
@@ -57,6 +62,15 @@ func middleware(t *template.Template, funcName string) func(w http.ResponseWrite
 func index(t *template.Template, w http.ResponseWriter, r *http.Request) {
 	gp := gridStoryPage{"grid", loadStory()}
 	err := t.ExecuteTemplate(w, "wrapper", &gp)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
+func narrator(t *template.Template, w http.ResponseWriter, r *http.Request) {
+	slug := r.URL.Path[len("/narrator/"):]
+	np := storyPage{"narrator", getStory(slug)}
+	err := t.ExecuteTemplate(w, "wrapper", &np)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
