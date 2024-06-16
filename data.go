@@ -28,6 +28,15 @@ type course struct {
 	Modules      []module
 }
 
+type narratorData struct {
+	Slug        string
+	Img         string
+	Video       string
+	Title       string
+	Name        string
+	Description string
+}
+
 type story struct {
 	Slug         string
 	Img          string
@@ -50,6 +59,11 @@ type gridPage struct {
 type gridStoryPage struct {
 	InternalTemplate string
 	Story            []story
+}
+
+type gridNarratorPage struct {
+	InternalTemplate string
+	Narrator         []narratorData
 }
 
 type coursePage struct {
@@ -234,6 +248,43 @@ func loadStory() []story {
 			Professor:    "Alexys Lozada",
 			ProfessorImg: "https://edteam-media.s3.amazonaws.com/users/thumbnail/66f015b2-0dfb-4ba9-bd0d-f7a7e1855275.jpeg",
 			Price:        24,
+		},
+	}
+}
+
+func loadNarrators() []narratorData {
+	return []narratorData{
+		{
+			Slug:        "eduardo-sacheri",
+			Img:         "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Video:       "/videos/pericon-eduardo-sacheri.mp4",
+			Title:       "Eduardo Sacheri",
+			Name:        "Eduardo Sacheri",
+			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
+		},
+		{
+			Slug:        "eduardo-sacheri",
+			Img:         "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Video:       "/videos/pericon-eduardo-sacheri.mp4",
+			Title:       "Eduardo Sacheri",
+			Name:        "Eduardo Sacheri",
+			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
+		},
+		{
+			Slug:        "eduardo-sacheri",
+			Img:         "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Video:       "/videos/pericon-eduardo-sacheri.mp4",
+			Title:       "Eduardo Sacheri",
+			Name:        "Eduardo Sacheri",
+			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
+		},
+		{
+			Slug:        "eduardo-sacheri",
+			Img:         "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Video:       "/videos/pericon-eduardo-sacheri.mp4",
+			Title:       "Eduardo Sacheri",
+			Name:        "Eduardo Sacheri",
+			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
 		},
 	}
 }
