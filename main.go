@@ -23,7 +23,7 @@ func main() {
 	http.Handle("/imgs/", http.StripPrefix("/imgs/", http.FileServer(http.Dir("public/imgs"))))
 	http.Handle("/videos/", http.StripPrefix("/videos/", http.FileServer(http.Dir("public/videos"))))
 
-	http.HandleFunc("/", middleware(t, "index"))
+	http.HandleFunc("/", middleware(t, "narrator-list"))
 	http.HandleFunc("/narrator-list", middleware(t, "narrator-list"))
 	http.HandleFunc("/narrator/", middleware(t, "narrator"))
 	http.HandleFunc("/cursos/", middleware(t, "courses"))

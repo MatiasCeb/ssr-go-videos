@@ -15,6 +15,14 @@ type module struct {
 	Classes     []class
 }
 
+type author struct {
+	Title       string
+	Description string
+	Slug        string
+	Video       string
+	Classes     []class
+}
+
 type course struct {
 	Slug         string
 	Img          string
@@ -35,6 +43,7 @@ type narratorData struct {
 	Title       string
 	Name        string
 	Description string
+	Authors     []author
 }
 
 type story struct {
@@ -163,7 +172,7 @@ func loadGrid() []course {
 func loadStory() []story {
 	return []story{
 		{
-			Slug:         "pericon-eduardo-sacheri",
+			Slug:         "eduardo-sacheri",
 			Img:          "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
 			Video:        "/videos/pericon-eduardo-sacheri.mp4",
 			Title:        "Eduardo Sacheri",
@@ -261,6 +270,48 @@ func loadNarrators() []narratorData {
 			Title:       "Eduardo Sacheri",
 			Name:        "Eduardo Sacheri",
 			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
+			Authors: []author{
+				{
+					Title:       "Jorge Luis Borges",
+					Description: "Textos de Jorge Luis Borges",
+					Slug:        "pericon-eduardo-sacheri",
+					Video:       "/videos/pericon-eduardo-sacheri.mp4",
+					Classes: []class{
+						{
+							Title:    "Pericón",
+							Duration: "05:33",
+							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+						},
+						{
+							Title:    "Pericón 2",
+							Duration: "03:02",
+							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+						},
+					},
+				},
+				{
+					Title:       "Ray Bradbury",
+					Description: "Textos de Ray Bradbury",
+					Slug:        "la-sirena-ray-bradbury",
+					Video:       "/videos/la-sirena-ray-bradbury.mp4",
+					Classes: []class{
+						{
+							Title:    "La sirena",
+							Duration: "05:33",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
+						},
+						{
+							Title:    "La sirena 2",
+							Duration: "03:02",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
+						},
+					},
+				},
+			},
 		},
 		{
 			Slug:        "eduardo-sacheri",
@@ -269,6 +320,48 @@ func loadNarrators() []narratorData {
 			Title:       "Eduardo Sacheri",
 			Name:        "Eduardo Sacheri",
 			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
+			Authors: []author{
+				{
+					Title:       "Jorge Luis Borges",
+					Description: "Textos de Jorge Luis Borges",
+					Slug:        "pericon-eduardo-sacheri",
+					Video:       "/videos/pericon-eduardo-sacheri.mp4",
+					Classes: []class{
+						{
+							Title:    "Pericón",
+							Duration: "05:33",
+							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+						},
+						{
+							Title:    "Pericón 2",
+							Duration: "03:02",
+							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+						},
+					},
+				},
+				{
+					Title:       "Ray Bradbury",
+					Description: "Textos de Ray Bradbury",
+					Slug:        "la-sirena-ray-bradbury",
+					Video:       "/videos/la-sirena-ray-bradbury.mp4",
+					Classes: []class{
+						{
+							Title:    "La sirena",
+							Duration: "05:33",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
+						},
+						{
+							Title:    "La sirena 2",
+							Duration: "03:02",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
+						},
+					},
+				},
+			},
 		},
 		{
 			Slug:        "eduardo-sacheri",
@@ -277,6 +370,48 @@ func loadNarrators() []narratorData {
 			Title:       "Eduardo Sacheri",
 			Name:        "Eduardo Sacheri",
 			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
+			Authors: []author{
+				{
+					Title:       "Jorge Luis Borges",
+					Description: "Textos de Jorge Luis Borges",
+					Slug:        "pericon-eduardo-sacheri",
+					Video:       "/videos/pericon-eduardo-sacheri.mp4",
+					Classes: []class{
+						{
+							Title:    "Pericón",
+							Duration: "05:33",
+							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+						},
+						{
+							Title:    "Pericón 2",
+							Duration: "03:02",
+							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+						},
+					},
+				},
+				{
+					Title:       "Ray Bradbury",
+					Description: "Textos de Ray Bradbury",
+					Slug:        "la-sirena-ray-bradbury",
+					Video:       "/videos/la-sirena-ray-bradbury.mp4",
+					Classes: []class{
+						{
+							Title:    "La sirena",
+							Duration: "05:33",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
+						},
+						{
+							Title:    "La sirena 2",
+							Duration: "03:02",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
+						},
+					},
+				},
+			},
 		},
 		{
 			Slug:        "eduardo-sacheri",
@@ -285,6 +420,48 @@ func loadNarrators() []narratorData {
 			Title:       "Eduardo Sacheri",
 			Name:        "Eduardo Sacheri",
 			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
+			Authors: []author{
+				{
+					Title:       "Jorge Luis Borges",
+					Description: "Textos de Jorge Luis Borges",
+					Slug:        "pericon-eduardo-sacheri",
+					Video:       "/videos/pericon-eduardo-sacheri.mp4",
+					Classes: []class{
+						{
+							Title:    "Pericón",
+							Duration: "05:33",
+							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+						},
+						{
+							Title:    "Pericón 2",
+							Duration: "03:02",
+							Slug:     "pericon-eduardo-sacheri",
+							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+						},
+					},
+				},
+				{
+					Title:       "Ray Bradbury",
+					Description: "Textos de Ray Bradbury",
+					Slug:        "la-sirena-ray-bradbury",
+					Video:       "/videos/la-sirena-ray-bradbury.mp4",
+					Classes: []class{
+						{
+							Title:    "La sirena",
+							Duration: "05:33",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
+						},
+						{
+							Title:    "La sirena 2",
+							Duration: "03:02",
+							Slug:     "la-sirena-ray-bradbury",
+							Video:    "/videos/la-sirena-ray-bradbury.mp4",
+						},
+					},
+				},
+			},
 		},
 	}
 }
