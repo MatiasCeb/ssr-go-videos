@@ -18,7 +18,6 @@ type module struct {
 type author struct {
 	Title       string
 	Description string
-	Slug        string
 	Classes     []class
 }
 
@@ -276,7 +275,6 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Eduardo Sacheri",
 					Description: "Textos de Eduardo Sacheri",
-					Slug:        "eduardo-sacheri",
 					Classes: []class{
 						{
 							Title:    "Pericón",
@@ -295,7 +293,6 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Ray Bradbury",
 					Description: "Textos de Ray Bradbury",
-					Slug:        "la-sirena-ray-bradbury",
 					Classes: []class{
 						{
 							Title:    "La sirena",
@@ -314,7 +311,6 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Jorge Luis Borges",
 					Description: "Textos de Jorge Luis Borges",
-					Slug:        "la-sirena-ray-bradbury",
 					Classes: []class{
 						{
 							Title:    "El fin",
@@ -333,10 +329,9 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Lucía Berlín",
 					Description: "Textos de Jorge Lucía Berlín",
-					Slug:        "doctor-h-a-moynihan-lucía-berlin",
 					Classes: []class{
 						{
-							Title:    "El fin",
+							Title:    "Doctor H. A. Moynihan",
 							Duration: "05:33",
 							Slug:     "doctor-h-a-moynihan-lucía-berlin",
 							Video:    "/videos/doctor-h-a-moynihan-lucía-berlin.mp4",
@@ -361,7 +356,6 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Jorge Luis Borges",
 					Description: "Textos de Jorge Luis Borges",
-					Slug:        "pericon-eduardo-sacheri",
 					Classes: []class{
 						{
 							Title:    "Pericón",
@@ -380,7 +374,6 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Ray Bradbury",
 					Description: "Textos de Ray Bradbury",
-					Slug:        "la-sirena-ray-bradbury",
 					Classes: []class{
 						{
 							Title:    "La sirena",
@@ -408,7 +401,6 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Jorge Luis Borges",
 					Description: "Textos de Jorge Luis Borges",
-					Slug:        "pericon-eduardo-sacheri",
 					Classes: []class{
 						{
 							Title:    "Pericón",
@@ -427,7 +419,6 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Ray Bradbury",
 					Description: "Textos de Ray Bradbury",
-					Slug:        "la-sirena-ray-bradbury",
 					Classes: []class{
 						{
 							Title:    "La sirena",
@@ -455,7 +446,6 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Jorge Luis Borges",
 					Description: "Textos de Jorge Luis Borges",
-					Slug:        "pericon-eduardo-sacheri",
 					Classes: []class{
 						{
 							Title:    "Pericón",
@@ -474,7 +464,6 @@ func loadNarrators() []narratorData {
 				{
 					Title:       "Ray Bradbury",
 					Description: "Textos de Ray Bradbury",
-					Slug:        "la-sirena-ray-bradbury",
 					Classes: []class{
 						{
 							Title:    "La sirena",
@@ -520,6 +509,18 @@ func loadClasses() []class {
 			Duration: "03:02",
 			Slug:     "la-sirena-ray-bradbury",
 			Video:    "/videos/la-sirena-ray-bradbury.mp4",
+		},
+		{
+			Title:    "El fin",
+			Duration: "05:33",
+			Slug:     "el-fin-jorge-luis-borges",
+			Video:    "/videos/el-fin-jorge-luis-borges.mp4",
+		},
+		{
+			Title:    "Doctor H. A. Moynihan",
+			Duration: "05:33",
+			Slug:     "doctor-h-a-moynihan-lucía-berlin",
+			Video:    "/videos/doctor-h-a-moynihan-lucía-berlin.mp4",
 		},
 	}
 }
