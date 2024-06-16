@@ -82,7 +82,7 @@ func NarratorList(t *template.Template, w http.ResponseWriter, r *http.Request) 
 
 func narrator(t *template.Template, w http.ResponseWriter, r *http.Request) {
 	slug := r.URL.Path[len("/narrator/"):]
-	np := storyPage{"narrator", getStory(slug)}
+	np := gridAuthorsPage{"narrator", getNarrators(slug)}
 	err := t.ExecuteTemplate(w, "wrapper", &np)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

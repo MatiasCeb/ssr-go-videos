@@ -8,25 +8,25 @@
   <div class="ed-grid">
     <section class="l-section">
       <div class="ed-grid m-grid-2 s-mb-2 s-px-2 lg-px-0">
-        <h2 class="s-mb-1 m-mb-0">Narraciones de {{ .Story.Name }}</h2>
+        <h2 class="s-mb-1 m-mb-0">Narraciones de {{ .Narrator.Name }}</h2>
         <div class="search-input form__item "><input type="search" name="search"
             placeholder="¿Buscas algo en específico?"></div>
       </div>
       <div class="temary landing s-bg-white s-radius-1">
         <div class="ed-grid card-template row-gap s-gap-0 s-overflow-hidden">
 
-        {{ range $i, $module := .Story.Modules }}
+        {{ range $i, $author := .Narrator.Authors }}
 
           <article class="article s-mb-0 s-border-bottom">
             <div class="s-pt-2 m-pt-3 s-px-2 s-px-3 s-pb-2 s-cursor-pointer">
               <div class="s-cross-center nowrap">
-                <h3 class="course-class__temary-title s-mb-05 s-mr-1">{{ $module.Title }}</h3>
+                <h3 class="course-class__temary-title s-mb-05 s-mr-1">{{ $author.Title }}</h3>
               </div>
-              <p class="small color grey-500 s-mb-0">{{ $module.Description }}</p>
+              <p class="small color grey-500 s-mb-0">{{ $author.Description }}</p>
             </div>
             <ul class="s-mb-0 ed-grid row-gap s-gap-1 s-overflow-hidden s-transition s-px-2 m-px-3 s-pb-2">
 
-            {{ range $j, $class := $module.Classes }}
+            {{ range $j, $class := $author.Classes }}
 
               <li class="fragment flex nowrap s-pxy-1 s-radius s-transition s-cursor-pointer s-relative false">
                 <div class="flex nowrap s-cross-baseline">
