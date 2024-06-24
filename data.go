@@ -2,6 +2,7 @@ package main
 
 type class struct {
 	Title    string
+	Narrator string
 	Duration string
 	Slug     string
 	Video    string
@@ -267,24 +268,39 @@ func loadNarrators() []narratorData {
 	return []narratorData{
 		{
 			Slug:        "eduardo-sacheri",
-			Img:         "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Img:         "https://www.piramideinvertida.com.ar/wp-content/uploads/2023/11/Sacheri.jpg",
 			Title:       "Eduardo Sacheri",
 			Name:        "Eduardo Sacheri",
 			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
 			Authors: []author{
+				{
+					Title:       "Jorge Luis Borges",
+					Description: "Textos de Jorge Luis Borges",
+					Classes: []class{
+						{
+							Title:    "El fin",
+							Narrator: "Eduardo Sacheri",
+							Duration: "18:19",
+							Slug:     "el-fin-jorge-luis-borges",
+							Video:    "/videos/el-fin-jorge-luis-borges.mp4",
+						},
+						{
+							Title:    "El brujo postergado",
+							Narrator: "Eduardo Sacheri",
+							Duration: "22:15",
+							Slug:     "el-brujo-postergado-jorge-luis-borges",
+							Video:    "/videos/el-brujo-postergado-jorge-luis-borges.mp4",
+						},
+					},
+				},
 				{
 					Title:       "Eduardo Sacheri",
 					Description: "Textos de Eduardo Sacheri",
 					Classes: []class{
 						{
 							Title:    "Pericón",
-							Duration: "05:33",
-							Slug:     "pericon-eduardo-sacheri",
-							Video:    "/videos/pericon-eduardo-sacheri.mp4",
-						},
-						{
-							Title:    "Pericón 2",
-							Duration: "03:02",
+							Narrator: "Eduardo Sacheri",
+							Duration: "34:16",
 							Slug:     "pericon-eduardo-sacheri",
 							Video:    "/videos/pericon-eduardo-sacheri.mp4",
 						},
@@ -296,31 +312,8 @@ func loadNarrators() []narratorData {
 					Classes: []class{
 						{
 							Title:    "La sirena",
-							Duration: "05:33",
-							Slug:     "la-sirena-ray-bradbury",
-							Video:    "/videos/la-sirena-ray-bradbury.mp4",
-						},
-						{
-							Title:    "La sirena 2",
-							Duration: "03:02",
-							Slug:     "la-sirena-ray-bradbury",
-							Video:    "/videos/la-sirena-ray-bradbury.mp4",
-						},
-					},
-				},
-				{
-					Title:       "Jorge Luis Borges",
-					Description: "Textos de Jorge Luis Borges",
-					Classes: []class{
-						{
-							Title:    "El fin",
-							Duration: "05:33",
-							Slug:     "el-fin-jorge-luis-borges",
-							Video:    "/videos/el-fin-jorge-luis-borges.mp4",
-						},
-						{
-							Title:    "La sirena 2",
-							Duration: "03:02",
+							Narrator: "Eduardo Sacheri",
+							Duration: "32:52",
 							Slug:     "la-sirena-ray-bradbury",
 							Video:    "/videos/la-sirena-ray-bradbury.mp4",
 						},
@@ -332,25 +325,20 @@ func loadNarrators() []narratorData {
 					Classes: []class{
 						{
 							Title:    "Doctor H. A. Moynihan",
-							Duration: "05:33",
+							Narrator: "Eduardo Sacheri",
+							Duration: "34:30",
 							Slug:     "doctor-h-a-moynihan-lucía-berlin",
 							Video:    "/videos/doctor-h-a-moynihan-lucía-berlin.mp4",
 						},
-						{
-							Title:    "La sirena 2",
-							Duration: "03:02",
-							Slug:     "la-sirena-ray-bradbury",
-							Video:    "/videos/la-sirena-ray-bradbury.mp4",
-						},
 					},
 				},
 			},
 		},
 		{
-			Slug:        "eduardo-sacheri2",
-			Img:         "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Slug:        "eduardo-sacheri",
+			Img:         "https://www.piramideinvertida.com.ar/wp-content/uploads/2023/11/Sacheri.jpg",
 			Title:       "Eduardo Sacheri",
-			Name:        "Eduardo Sacheri2",
+			Name:        "Eduardo Sacheri",
 			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
 			Authors: []author{
 				{
@@ -358,16 +346,18 @@ func loadNarrators() []narratorData {
 					Description: "Textos de Jorge Luis Borges",
 					Classes: []class{
 						{
-							Title:    "Pericón",
-							Duration: "05:33",
-							Slug:     "pericon-eduardo-sacheri",
-							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+							Title:    "El fin",
+							Narrator: "Eduardo Sacheri",
+							Duration: "18:19",
+							Slug:     "el-fin-jorge-luis-borges",
+							Video:    "/videos/el-fin-jorge-luis-borges.mp4",
 						},
 						{
-							Title:    "Pericón 2",
-							Duration: "03:02",
-							Slug:     "pericon-eduardo-sacheri",
-							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+							Title:    "El brujo postergado",
+							Narrator: "Eduardo Sacheri",
+							Duration: "22:15",
+							Slug:     "el-brujo-postergado-jorge-luis-borges",
+							Video:    "/videos/el-brujo-postergado-jorge-luis-borges.mp4",
 						},
 					},
 				},
@@ -377,13 +367,8 @@ func loadNarrators() []narratorData {
 					Classes: []class{
 						{
 							Title:    "La sirena",
-							Duration: "05:33",
-							Slug:     "la-sirena-ray-bradbury",
-							Video:    "/videos/la-sirena-ray-bradbury.mp4",
-						},
-						{
-							Title:    "La sirena 2",
-							Duration: "03:02",
+							Narrator: "Eduardo Sacheri",
+							Duration: "32:52",
 							Slug:     "la-sirena-ray-bradbury",
 							Video:    "/videos/la-sirena-ray-bradbury.mp4",
 						},
@@ -392,10 +377,10 @@ func loadNarrators() []narratorData {
 			},
 		},
 		{
-			Slug:        "eduardo-sacheri3",
-			Img:         "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Slug:        "eduardo-sacheri",
+			Img:         "https://www.piramideinvertida.com.ar/wp-content/uploads/2023/11/Sacheri.jpg",
 			Title:       "Eduardo Sacheri",
-			Name:        "Eduardo Sacheri3",
+			Name:        "Eduardo Sacheri",
 			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
 			Authors: []author{
 				{
@@ -403,16 +388,18 @@ func loadNarrators() []narratorData {
 					Description: "Textos de Jorge Luis Borges",
 					Classes: []class{
 						{
-							Title:    "Pericón",
-							Duration: "05:33",
-							Slug:     "pericon-eduardo-sacheri",
-							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+							Title:    "El fin",
+							Narrator: "Eduardo Sacheri",
+							Duration: "18:19",
+							Slug:     "el-fin-jorge-luis-borges",
+							Video:    "/videos/el-fin-jorge-luis-borges.mp4",
 						},
 						{
-							Title:    "Pericón 2",
-							Duration: "03:02",
-							Slug:     "pericon-eduardo-sacheri",
-							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+							Title:    "El brujo postergado",
+							Narrator: "Eduardo Sacheri",
+							Duration: "22:15",
+							Slug:     "el-brujo-postergado-jorge-luis-borges",
+							Video:    "/videos/el-brujo-postergado-jorge-luis-borges.mp4",
 						},
 					},
 				},
@@ -422,13 +409,8 @@ func loadNarrators() []narratorData {
 					Classes: []class{
 						{
 							Title:    "La sirena",
-							Duration: "05:33",
-							Slug:     "la-sirena-ray-bradbury",
-							Video:    "/videos/la-sirena-ray-bradbury.mp4",
-						},
-						{
-							Title:    "La sirena 2",
-							Duration: "03:02",
+							Narrator: "Eduardo Sacheri",
+							Duration: "32:52",
 							Slug:     "la-sirena-ray-bradbury",
 							Video:    "/videos/la-sirena-ray-bradbury.mp4",
 						},
@@ -438,9 +420,9 @@ func loadNarrators() []narratorData {
 		},
 		{
 			Slug:        "eduardo-sacheri4",
-			Img:         "https://pbs.twimg.com/profile_images/1529577556118323202/cpsIFpki_400x400.jpg",
+			Img:         "https://www.piramideinvertida.com.ar/wp-content/uploads/2023/11/Sacheri.jpg",
 			Title:       "Eduardo Sacheri",
-			Name:        "Eduardo Sacheri4",
+			Name:        "Eduardo Sacheri",
 			Description: "Los mejores relatos en la voz del reconocido escritor argentino.",
 			Authors: []author{
 				{
@@ -448,16 +430,18 @@ func loadNarrators() []narratorData {
 					Description: "Textos de Jorge Luis Borges",
 					Classes: []class{
 						{
-							Title:    "Pericón",
-							Duration: "05:33",
-							Slug:     "pericon-eduardo-sacheri",
-							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+							Title:    "El fin",
+							Narrator: "Eduardo Sacheri",
+							Duration: "18:19",
+							Slug:     "el-fin-jorge-luis-borges",
+							Video:    "/videos/el-fin-jorge-luis-borges.mp4",
 						},
 						{
-							Title:    "Pericón 2",
-							Duration: "03:02",
-							Slug:     "pericon-eduardo-sacheri",
-							Video:    "/videos/pericon-eduardo-sacheri.mp4",
+							Title:    "El brujo postergado",
+							Narrator: "Eduardo Sacheri",
+							Duration: "22:15",
+							Slug:     "el-brujo-postergado-jorge-luis-borges",
+							Video:    "/videos/el-brujo-postergado-jorge-luis-borges.mp4",
 						},
 					},
 				},
@@ -467,13 +451,8 @@ func loadNarrators() []narratorData {
 					Classes: []class{
 						{
 							Title:    "La sirena",
-							Duration: "05:33",
-							Slug:     "la-sirena-ray-bradbury",
-							Video:    "/videos/la-sirena-ray-bradbury.mp4",
-						},
-						{
-							Title:    "La sirena 2",
-							Duration: "03:02",
+							Narrator: "Eduardo Sacheri",
+							Duration: "32:52",
 							Slug:     "la-sirena-ray-bradbury",
 							Video:    "/videos/la-sirena-ray-bradbury.mp4",
 						},
@@ -488,37 +467,43 @@ func loadClasses() []class {
 	return []class{
 		{
 			Title:    "Pericón",
-			Duration: "05:33",
+			Narrator: "Eduardo Sacheri",
+			Duration: "34:16",
 			Slug:     "pericon-eduardo-sacheri",
 			Video:    "/videos/pericon-eduardo-sacheri.mp4",
 		},
 		{
 			Title:    "Pericón 2",
+			Narrator: "Eduardo Sacheri",
 			Duration: "03:02",
 			Slug:     "pericon-eduardo-sacheri",
 			Video:    "/videos/pericon-eduardo-sacheri.mp4",
 		},
 		{
 			Title:    "La sirena",
-			Duration: "05:33",
+			Narrator: "Eduardo Sacheri",
+			Duration: "32:52",
 			Slug:     "la-sirena-ray-bradbury",
 			Video:    "/videos/la-sirena-ray-bradbury.mp4",
 		},
 		{
-			Title:    "La sirena 2",
-			Duration: "03:02",
-			Slug:     "la-sirena-ray-bradbury",
-			Video:    "/videos/la-sirena-ray-bradbury.mp4",
+			Title:    "El brujo postergado",
+			Narrator: "Eduardo Sacheri",
+			Duration: "22:15",
+			Slug:     "el-brujo-postergado-jorge-luis-borges",
+			Video:    "/videos/el-brujo-postergado-jorge-luis-borges.mp4",
 		},
 		{
 			Title:    "El fin",
-			Duration: "05:33",
+			Narrator: "Eduardo Sacheri",
+			Duration: "18:19",
 			Slug:     "el-fin-jorge-luis-borges",
 			Video:    "/videos/el-fin-jorge-luis-borges.mp4",
 		},
 		{
 			Title:    "Doctor H. A. Moynihan",
-			Duration: "05:33",
+			Narrator: "Eduardo Sacheri",
+			Duration: "34:30",
 			Slug:     "doctor-h-a-moynihan-lucía-berlin",
 			Video:    "/videos/doctor-h-a-moynihan-lucía-berlin.mp4",
 		},

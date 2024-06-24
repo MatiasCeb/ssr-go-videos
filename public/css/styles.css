@@ -9017,8 +9017,8 @@ label + input::placeholder {
 
 .main-header {
   height: var(--header-height);
-  border-bottom: 1px solid var(--border-color);
-  background: #FFF;
+  border-bottom: 16px solid var(--border-color);
+  background: #22303a;
   position: fixed;
   top: 0;
   width: 100%;

@@ -9,8 +9,6 @@
     <section class="l-section">
       <div class="ed-grid m-grid-2 s-mb-2 s-px-2 lg-px-0">
         <h2 class="s-mb-1 m-mb-0">Narraciones de {{ .Narrator.Name }}</h2>
-        <div class="search-input form__item "><input type="search" name="search"
-            placeholder="¿Buscas algo en específico?"></div>
       </div>
       <div class="temary landing s-bg-white s-radius-1">
         <div class="ed-grid card-template row-gap s-gap-0 s-overflow-hidden">
