@@ -22,11 +22,11 @@
               </div>
               <p class="small color grey-500 s-mb-0">{{ $author.Description }}</p>
             </div>
-            <ul class="s-mb-0 ed-grid row-gap s-gap-1 s-overflow-hidden s-transition s-px-2 m-px-3 s-pb-2">
+            <ul class="s-mb-0 ed-grid row-gap s-gap-0 s-overflow-hidden s-transition s-px-2 m-px-3 s-pb-2">
 
             {{ range $j, $class := $author.Classes }}
 
-              <li class="fragment flex nowrap s-pxy-1 s-radius s-transition s-cursor-pointer s-relative false">
+              <li class="fragment flex nowrap s-radius s-transition s-cursor-pointer s-relative false">
                 <div class="flex nowrap s-cross-baseline">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 15 15" class="svg-icon flex-none s-mr-1 fill 
                            red-400">
